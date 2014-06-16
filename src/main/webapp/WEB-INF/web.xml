@@ -12,7 +12,7 @@
 	
 	<servlet-mapping>
 		<servlet-name>collectionServlet</servlet-name>
-		<url-pattern>/oto/collection</url-pattern>
+		<url-pattern>/collection</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>

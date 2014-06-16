@@ -27,9 +27,10 @@ public class LabelingDAO {
 		ResultSet result = query.execute();
 		while(result.next()) {
 			id = result.getInt(1);
-			String name = result.getString(2);
-			String description = result.getString(3);
-			label = new Label(id, name, description);
+			int collection = result.getInt(2);
+			String name = result.getString(3);
+			String description = result.getString(4);
+			label = new Label(id, CollectionDAO.getInstance().get(collection), name, description);
 			label.setTerms(TermDAO.getInstance().getTerms(label));
 		}
 		query.close();
